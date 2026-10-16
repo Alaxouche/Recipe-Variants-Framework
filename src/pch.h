@@ -1,11 +1,20 @@
+// SPDX-License-Identifier: GPL-3.0-only
+// Copyright (C) 2026 Alaxouche
+
 #pragma once
 
 #pragma warning(push)
 #include <RE/Skyrim.h>
 #include <REL/Relocation.h>
 #include <SKSE/SKSE.h>
+#include <REX/REX/Singleton.h>
 
+#include <algorithm>
 #include <fstream>
+#include <functional>
+#include <optional>
+#include <ranges>
+#include <utility>
 
 #ifdef NDEBUG
 #	include <spdlog/sinks/basic_file_sink.h>
@@ -15,7 +24,6 @@
 #pragma warning(pop)
 
 using namespace std::literals;
-using namespace std;
 
 namespace logger = SKSE::log;
 
@@ -23,9 +31,5 @@ namespace util
 {
 	using SKSE::stl::report_and_fail;
 }
-
-#define DLLEXPORT __declspec(dllexport)
-
-#define RELOCATION_OFFSET(SE, AE) REL::VariantOffset(SE, AE, 0).offset()
 
 #include "plugin.h"

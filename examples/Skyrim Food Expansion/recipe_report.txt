@@ -1,0 +1,180 @@
+== Recipes per group
+
+Apple: base Alax_Apple01 "Red Apple", 6 variant(s)
+   3 recipe(s) name the base, 7 name a variant
+
+Potato: base Alax_Potato01 "Potato", 7 variant(s)
+   6 recipe(s) name the base, 17 name a variant
+
+Tomato: base Alax_Tomato01 "Tomato", 8 variant(s)
+   9 recipe(s) name the base, 56 name a variant
+
+Garlic: base Alax_Garlic01 "Garlic", 6 variant(s)
+   14 recipe(s) name the base, 57 name a variant
+
+Carrot: base Alax_Carrot01 "Carrot", 3 variant(s)
+   1 recipe(s) name the base, 0 name a variant
+
+Bread: base Alax_Bread01 "Bread", 7 variant(s)
+   1 recipe(s) name the base, 0 name a variant
+
+Salmon Meat: base Alax_Salmon01 "Salmon Meat", 3 variant(s)
+   1 recipe(s) name the base, 0 name a variant
+
+Sweet Potato: base Alax_SweetPotato03 "Sweet Potato", 2 variant(s)
+   1 recipe(s) name the base, 2 name a variant
+
+Pumpkin: base Alax_Pumpkin01 "Pumpkin", 4 variant(s)
+   1 recipe(s) name the base, 4 name a variant
+
+Walnut: base Alax_Walnut01 "Walnut", 2 variant(s)
+   1 recipe(s) name the base, 2 name a variant
+
+Ginger: base Alax_Ginger02 "Ginger", 1 variant(s)
+   2 recipe(s) name the base, 2 name a variant
+
+Gourd Half: base Alax_Gourd02 "Gourd", 1 variant(s)
+   1 recipe(s) name the base, 1 name a variant
+
+== Duplicates once variants count as the base
+
+Alax_Garlic01 "Garlic" x5: 4 recipes
+   keep   000106:skyrim food expansion.esp  RecipeFoodCloveGarlic01
+   delete 000107:skyrim food expansion.esp  RecipeFoodCloveGarlic02
+   delete 000108:skyrim food expansion.esp  RecipeFoodCloveGarlic03
+   delete 000109:skyrim food expansion.esp  RecipeFoodCloveGarlic04
+
+Alax_Ginger01 "Ginger" x2: 2 recipes
+   keep   000128:skyrim food expansion.esp  RecipeFoodHalfGinger01
+   delete 000129:skyrim food expansion.esp  RecipeFoodHalfGinger02
+
+Alax_Gourd02 "Gourd" x2: 2 recipes
+   keep   000123:skyrim food expansion.esp  RecipeFoodHalfGourd01
+   delete 000124:skyrim food expansion.esp  RecipeFoodHalfGourd02
+
+Alax_GourdSlice "Gourd Slice" x5: 2 recipes
+   keep   000125:skyrim food expansion.esp  RecipeFoodGourdSlice01
+   delete 000126:skyrim food expansion.esp  RecipeFoodGourdSlice02
+
+Alax_Potato01 "Potato" x2: 3 recipes
+   none names only base items: retarget one to the bases, delete the rest
+   delete 000111:skyrim food expansion.esp  RecipeFoodHalfPotato01
+   delete 000112:skyrim food expansion.esp  RecipeFoodHalfPotato02
+   delete 000113:skyrim food expansion.esp  RecipeFoodHalfPotato03
+
+Alax_PumpkinPie01 "Pumpkin Pie" x1: 5 recipes
+   keep   00017F:skyrim food expansion.esp  RecipeFoodPumpkinPie01
+   delete 000180:skyrim food expansion.esp  RecipeFoodPumpkinPie02
+   delete 000181:skyrim food expansion.esp  RecipeFoodPumpkinPie03
+   delete 000182:skyrim food expansion.esp  RecipeFoodPumpkinPie04
+   delete 000183:skyrim food expansion.esp  RecipeFoodPumpkinPie05
+
+Alax_SweetPotato06 "Sweet Potato" x2: 3 recipes
+   keep   000114:skyrim food expansion.esp  RecipeFoodHalfSweetPotato01
+   delete 000115:skyrim food expansion.esp  RecipeFoodHalfSweetPotato02
+   delete 000116:skyrim food expansion.esp  RecipeFoodHalfSweetPotato03
+
+Alax_WalnutBread "Walnut Bread" x1: 3 recipes
+   keep   00012D:skyrim food expansion.esp  RecipeFoodWalnutBread01
+   delete 00012E:skyrim food expansion.esp  RecipeFoodWalnutBread02
+   delete 00012F:skyrim food expansion.esp  RecipeFoodWalnutBread03
+
+FoodAppleCabbageStew x1: 6 recipes
+   keep   0F4312:skyrim.esm  RecipeFoodStewAppleCabbage
+   delete 0000C3:skyrim food expansion.esp  RecipeFoodStewAppleCabbage03
+   delete 0000C4:skyrim food expansion.esp  RecipeFoodStewAppleCabbage04
+   delete 0000C5:skyrim food expansion.esp  RecipeFoodStewAppleCabbage05
+   delete 0000C6:skyrim food expansion.esp  RecipeFoodStewAppleCabbage06
+   delete 0000C7:skyrim food expansion.esp  RecipeFoodStewAppleCabbage07
+
+FoodCabbagePotatoSoup x1: 8 recipes
+   keep   0F431A:skyrim.esm  RecipeFoodSoupCabbagePotato
+   delete 00010A:skyrim food expansion.esp  RecipeFoodSoupCabbagePotato02
+   delete 00010B:skyrim food expansion.esp  RecipeFoodSoupCabbagePotato03
+   delete 00010C:skyrim food expansion.esp  RecipeFoodSoupCabbagePotato04
+   delete 00010D:skyrim food expansion.esp  RecipeFoodSoupCabbagePotato05
+   delete 00010E:skyrim food expansion.esp  RecipeFoodSoupCabbagePotato06
+   delete 00010F:skyrim food expansion.esp  RecipeFoodSoupCabbagePotato07
+   delete 000110:skyrim food expansion.esp  RecipeFoodSoupCabbagePotato08
+
+FoodTomatoSoup x1: 62 recipes
+   none names only base items: retarget one to the bases, delete the rest
+   delete 0000C8:skyrim food expansion.esp  RecipeFoodSoupTomato02Garlic01
+   delete 0000C9:skyrim food expansion.esp  RecipeFoodSoupTomato03Garlic01
+   delete 0000CA:skyrim food expansion.esp  RecipeFoodSoupTomato04Garlic01
+   delete 0000CB:skyrim food expansion.esp  RecipeFoodSoupTomato05Garlic01
+   delete 0000CC:skyrim food expansion.esp  RecipeFoodSoupTomato06Garlic01
+   delete 0000CD:skyrim food expansion.esp  RecipeFoodSoupTomato07Garlic01
+   delete 0000CE:skyrim food expansion.esp  RecipeFoodSoupTomato08Garlic01
+   delete 0000CF:skyrim food expansion.esp  RecipeFoodSoupTomato09Garlic01
+   delete 0000D0:skyrim food expansion.esp  RecipeFoodSoupTomato09Garlic02
+   delete 0000D1:skyrim food expansion.esp  RecipeFoodSoupTomato08Garlic02
+   delete 0000D2:skyrim food expansion.esp  RecipeFoodSoupTomato07Garlic02
+   delete 0000D3:skyrim food expansion.esp  RecipeFoodSoupTomato06Garlic02
+   delete 0000D4:skyrim food expansion.esp  RecipeFoodSoupTomato05Garlic02
+   delete 0000D5:skyrim food expansion.esp  RecipeFoodSoupTomato04Garlic02
+   delete 0000D6:skyrim food expansion.esp  RecipeFoodSoupTomato03Garlic02
+   delete 0000D7:skyrim food expansion.esp  RecipeFoodSoupTomato02Garlic02
+   delete 0000D8:skyrim food expansion.esp  RecipeFoodSoupTomato01Garlic02
+   delete 0000D9:skyrim food expansion.esp  RecipeFoodSoupTomato09Garlic03
+   delete 0000DA:skyrim food expansion.esp  RecipeFoodSoupTomato08Garlic03
+   delete 0000DB:skyrim food expansion.esp  RecipeFoodSoupTomato07Garlic03
+   delete 0000DC:skyrim food expansion.esp  RecipeFoodSoupTomato06Garlic03
+   delete 0000DD:skyrim food expansion.esp  RecipeFoodSoupTomato05Garlic03
+   delete 0000DE:skyrim food expansion.esp  RecipeFoodSoupTomato04Garlic03
+   delete 0000DF:skyrim food expansion.esp  RecipeFoodSoupTomato03Garlic03
+   delete 0000E0:skyrim food expansion.esp  RecipeFoodSoupTomato02Garlic03
+   delete 0000E1:skyrim food expansion.esp  RecipeFoodSoupTomato01Garlic03
+   delete 0000E2:skyrim food expansion.esp  RecipeFoodSoupTomato09Garlic04
+   delete 0000E3:skyrim food expansion.esp  RecipeFoodSoupTomato08Garlic04
+   delete 0000E4:skyrim food expansion.esp  RecipeFoodSoupTomato07Garlic04
+   delete 0000E5:skyrim food expansion.esp  RecipeFoodSoupTomato06Garlic04
+   delete 0000E6:skyrim food expansion.esp  RecipeFoodSoupTomato05Garlic04
+   delete 0000E7:skyrim food expansion.esp  RecipeFoodSoupTomato04Garlic04
+   delete 0000E8:skyrim food expansion.esp  RecipeFoodSoupTomato03Garlic04
+   delete 0000E9:skyrim food expansion.esp  RecipeFoodSoupTomato02Garlic04
+   delete 0000EA:skyrim food expansion.esp  RecipeFoodSoupTomato01Garlic04
+   delete 0000EB:skyrim food expansion.esp  RecipeFoodSoupTomato09Garlic05
+   delete 0000EC:skyrim food expansion.esp  RecipeFoodSoupTomato08Garlic05
+   delete 0000ED:skyrim food expansion.esp  RecipeFoodSoupTomato07Garlic05
+   delete 0000EE:skyrim food expansion.esp  RecipeFoodSoupTomato06Garlic05
+   delete 0000EF:skyrim food expansion.esp  RecipeFoodSoupTomato05Garlic05
+   delete 0000F0:skyrim food expansion.esp  RecipeFoodSoupTomato04Garlic05
+   delete 0000F1:skyrim food expansion.esp  RecipeFoodSoupTomato03Garlic05
+   delete 0000F2:skyrim food expansion.esp  RecipeFoodSoupTomato02Garlic05
+   delete 0000F3:skyrim food expansion.esp  RecipeFoodSoupTomato01Garlic05
+   delete 0000F4:skyrim food expansion.esp  RecipeFoodSoupTomato09Garlic06
+   delete 0000F5:skyrim food expansion.esp  RecipeFoodSoupTomato08Garlic06
+   delete 0000F6:skyrim food expansion.esp  RecipeFoodSoupTomato07Garlic06
+   delete 0000F7:skyrim food expansion.esp  RecipeFoodSoupTomato06Garlic06
+   delete 0000F8:skyrim food expansion.esp  RecipeFoodSoupTomato05Garlic06
+   delete 0000F9:skyrim food expansion.esp  RecipeFoodSoupTomato04Garlic06
+   delete 0000FA:skyrim food expansion.esp  RecipeFoodSoupTomato03Garlic06
+   delete 0000FB:skyrim food expansion.esp  RecipeFoodSoupTomato02Garlic06
+   delete 0000FC:skyrim food expansion.esp  RecipeFoodSoupTomato01Garlic06
+   delete 0000FD:skyrim food expansion.esp  RecipeFoodSoupTomato09Garlic07
+   delete 0000FE:skyrim food expansion.esp  RecipeFoodSoupTomato08Garlic07
+   delete 0000FF:skyrim food expansion.esp  RecipeFoodSoupTomato07Garlic07
+   delete 000100:skyrim food expansion.esp  RecipeFoodSoupTomato06Garlic07
+   delete 000101:skyrim food expansion.esp  RecipeFoodSoupTomato05Garlic07
+   delete 000102:skyrim food expansion.esp  RecipeFoodSoupTomato04Garlic07
+   delete 000103:skyrim food expansion.esp  RecipeFoodSoupTomato03Garlic07
+   delete 000104:skyrim food expansion.esp  RecipeFoodSoupTomato02Garlic07
+   delete 000105:skyrim food expansion.esp  RecipeFoodSoupTomato01Garlic07
+
+FoodVenisonStew x1: 8 recipes
+   keep   0F4317:skyrim.esm  RecipeFoodStewVenison
+   delete 0000BB:skyrim food expansion.esp  RecipeFoodStewVenison02
+   delete 0000BC:skyrim food expansion.esp  RecipeFoodStewVenison03
+   delete 0000BD:skyrim food expansion.esp  RecipeFoodStewVenison04
+   delete 0000BE:skyrim food expansion.esp  RecipeFoodStewVenison08
+   delete 0000BF:skyrim food expansion.esp  RecipeFoodStewVenison06
+   delete 0000C0:skyrim food expansion.esp  RecipeFoodStewVenison05
+   delete 0000C1:skyrim food expansion.esp  RecipeFoodStewVenison07
+
+98 recipe(s) can go.
+
+== Recipes naming a variant with no base twin (retarget to the base)
+   0117FE:hearthfires.esm  BYOHRecipeFoodApplePie  <- Alax_Apple02 "Green Apple"
+   0117F9:hearthfires.esm  BYOHRecipeFoodAppleDumplings  <- Alax_Apple02 "Green Apple"
+   00012C:skyrim food expansion.esp  RecipeFoodGingerSlice03  <- Alax_Ginger03 "Ginger"

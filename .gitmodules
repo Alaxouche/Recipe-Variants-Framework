@@ -1,0 +1,9 @@
+[submodule "lib/commonlibsse-ng"]
+	path = lib/commonlibsse-ng
+	url = https://github.com/alandtse/CommonLibSSE-NG.git
+[submodule "ClibUtil"]
+	path = ClibUtil
+	url = https://github.com/powerof3/ClibUtil.git
+[submodule "xbyak"]
+	path = xbyak
+	url = https://github.com/herumi/xbyak.git

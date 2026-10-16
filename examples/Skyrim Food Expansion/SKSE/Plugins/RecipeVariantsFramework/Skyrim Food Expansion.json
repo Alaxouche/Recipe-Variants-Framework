@@ -1,0 +1,164 @@
+// Skyrim Food Expansion -- RecipeVariantsFramework groups.
+//
+// Every recipe names one item (the base). With these groups, any variant of that
+// item counts at the cooking pot and the oven: one Apple Cabbage Stew recipe
+// accepts every apple instead of one copy of the recipe per apple.
+//
+// Groups below are the ones a recipe actually needs, taken from
+// Skyrim Food Expansion.esp 3.1.1 and the vanilla masters: the variants SFE
+// duplicates recipes for, plus vanilla ingredients (carrot, bread, salmon) whose
+// SFE variants currently cannot be cooked at all.
+{
+	"$schema_version": 1,
+	"groups": [
+		{
+			"name": "Apple",
+			"base": "Skyrim.esm|0x064B2E",                         // Red Apple
+			"variants": [
+				"Skyrim.esm|0x064B2F",                             // Green Apple
+				"Skyrim Food Expansion.esp|0x000005",              // Alax_Apple03
+				"Skyrim Food Expansion.esp|0x000006",              // Alax_Apple04
+				"Skyrim Food Expansion.esp|0x000007",              // Alax_Apple05
+				"Skyrim Food Expansion.esp|0x000008",              // Alax_Apple06
+				"Skyrim Food Expansion.esp|0x000009"               // Alax_Apple07 (green)
+			],
+			"workbench_keywords": ["CraftingCookpot", "BYOHCraftingOven"],
+			"requires": "Skyrim Food Expansion.esp"
+		},
+		{
+			"name": "Potato",
+			"base": "Skyrim.esm|0x064B41",                         // Alax_Potato01
+			"variants": [
+				"Skyrim Food Expansion.esp|0x000043",              // Alax_Potato02
+				"Skyrim Food Expansion.esp|0x000044",              // Alax_Potato03
+				"Skyrim Food Expansion.esp|0x000045",              // Alax_Potato04
+				"Skyrim Food Expansion.esp|0x000092",              // Alax_Potato05
+				"Skyrim Food Expansion.esp|0x000093",              // Alax_Potato06
+				"Skyrim Food Expansion.esp|0x000094",              // Alax_Potato07
+				// Alax_Potato08 is the half the cutting recipes make; the stews
+				// already take two of them for one potato.
+				{ "form": "Skyrim Food Expansion.esp|0x000095", "per_base": 2 }
+			],
+			"workbench_keywords": ["CraftingCookpot", "BYOHCraftingOven"],
+			"requires": "Skyrim Food Expansion.esp"
+		},
+		{
+			"name": "Tomato",
+			"base": "Skyrim.esm|0x064B42",                         // Alax_Tomato01
+			"variants": [
+				"Skyrim Food Expansion.esp|0x00009E",              // Alax_Tomato02
+				"Skyrim Food Expansion.esp|0x00009F",              // Alax_Tomato03
+				"Skyrim Food Expansion.esp|0x0000A0",              // Alax_Tomato04
+				"Skyrim Food Expansion.esp|0x0000A1",              // Alax_Tomato05
+				"Skyrim Food Expansion.esp|0x0000A2",              // Alax_Tomato06
+				"Skyrim Food Expansion.esp|0x0000A3",              // Alax_Tomato07
+				"Skyrim Food Expansion.esp|0x0000A4",              // Alax_Tomato08
+				"Skyrim Food Expansion.esp|0x0000A5"               // Alax_Tomato09
+			],
+			"workbench_keywords": ["CraftingCookpot", "BYOHCraftingOven"],
+			"requires": "Skyrim Food Expansion.esp"
+		},
+		{
+			"name": "Garlic",
+			"base": "Skyrim.esm|0x034D22",                         // Alax_Garlic01
+			"variants": [
+				"Skyrim Food Expansion.esp|0x0000A8",              // Alax_Garlic04
+				"Skyrim Food Expansion.esp|0x0000AA",              // Alax_Garlic03
+				"Skyrim Food Expansion.esp|0x0000AC",              // Alax_Garlic05
+				// Cloves: the tomato soups ask for five of these instead of one bulb.
+				{ "form": "Skyrim Food Expansion.esp|0x0000AB", "per_base": 5 },   // Alax_Garlic02
+				{ "form": "Skyrim Food Expansion.esp|0x0000AD", "per_base": 5 },   // Alax_Garlic06
+				{ "form": "Skyrim Food Expansion.esp|0x0000AE", "per_base": 5 }    // Alax_Garlic07
+			],
+			"workbench_keywords": ["CraftingCookpot", "BYOHCraftingOven"],
+			"requires": "Skyrim Food Expansion.esp"
+		},
+		{
+			"name": "Carrot",
+			"base": "Skyrim.esm|0x064B40",                         // Alax_Carrot01
+			"variants": [
+				"Skyrim Food Expansion.esp|0x00001C",              // Alax_Carrot02
+				"Skyrim Food Expansion.esp|0x00001D",              // Alax_Carrot03
+				"Skyrim Food Expansion.esp|0x00001E"               // Alax_Carrot04
+			],
+			"workbench_keywords": ["CraftingCookpot", "BYOHCraftingOven"],
+			"requires": "Skyrim Food Expansion.esp"
+		},
+		{
+			"name": "Bread",
+			"base": "Skyrim.esm|0x065C97",                         // Alax_Bread01
+			"variants": [
+				"Skyrim Food Expansion.esp|0x000012",              // Alax_Bread02
+				"Skyrim Food Expansion.esp|0x000013",              // Alax_Bread03
+				"Skyrim Food Expansion.esp|0x000014",              // Alax_Bread04
+				"Skyrim Food Expansion.esp|0x000015",              // Alax_Bread05
+				"Skyrim Food Expansion.esp|0x000016",              // Alax_Bread06
+				"Skyrim Food Expansion.esp|0x000017",              // Alax_Bread07
+				"Skyrim Food Expansion.esp|0x000018"               // Alax_Bread08
+			],
+			"workbench_keywords": ["CraftingCookpot", "BYOHCraftingOven"],
+			"requires": "Skyrim Food Expansion.esp"
+		},
+		{
+			"name": "Salmon Meat",
+			"base": "Skyrim.esm|0x065C9F",                         // Alax_Salmon01
+			"variants": [
+				"Skyrim Food Expansion.esp|0x000802",              // Alax_Salmon02
+				"Skyrim Food Expansion.esp|0x000803",              // Alax_Salmon03
+				"Skyrim Food Expansion.esp|0x000804"               // Alax_Salmon04
+			],
+			"workbench_keywords": ["CraftingCookpot", "BYOHCraftingOven"],
+			"requires": "Skyrim Food Expansion.esp"
+		},
+		{
+			"name": "Sweet Potato",
+			"base": "Skyrim Food Expansion.esp|0x00009A",          // Alax_SweetPotato03
+			"variants": [
+				"Skyrim Food Expansion.esp|0x00009B",              // Alax_SweetPotato04
+				"Skyrim Food Expansion.esp|0x00009C"               // Alax_SweetPotato05
+			],
+			"workbench_keywords": ["CraftingCookpot", "BYOHCraftingOven"],
+			"requires": "Skyrim Food Expansion.esp"
+		},
+		{
+			"name": "Pumpkin",
+			"base": "Skyrim Food Expansion.esp|0x000046",          // Alax_Pumpkin01
+			"variants": [
+				"Skyrim Food Expansion.esp|0x000047",              // Alax_Pumpkin02
+				"Skyrim Food Expansion.esp|0x000048",              // Alax_Pumpkin03
+				"Skyrim Food Expansion.esp|0x000049",              // Alax_Pumpkin04
+				"Skyrim Food Expansion.esp|0x00004A"               // Alax_Pumpkin05
+			],
+			"workbench_keywords": ["CraftingCookpot", "BYOHCraftingOven"],
+			"requires": "Skyrim Food Expansion.esp"
+		},
+		{
+			"name": "Walnut",
+			"base": "Skyrim Food Expansion.esp|0x0000B6",          // Alax_Walnut01
+			"variants": [
+				"Skyrim Food Expansion.esp|0x0000B7",              // Alax_Walnut02
+				"Skyrim Food Expansion.esp|0x0000B8"               // Alax_Walnut03
+			],
+			"workbench_keywords": ["CraftingCookpot", "BYOHCraftingOven"],
+			"requires": "Skyrim Food Expansion.esp"
+		},
+		{
+			"name": "Ginger",
+			"base": "Skyrim Food Expansion.esp|0x000026",          // Alax_Ginger02 (whole)
+			"variants": [
+				"Skyrim Food Expansion.esp|0x000027"               // Alax_Ginger03 (whole)
+			],
+			"workbench_keywords": ["CraftingCookpot", "BYOHCraftingOven"],
+			"requires": "Skyrim Food Expansion.esp"
+		},
+		{
+			"name": "Gourd Half",
+			"base": "Skyrim Food Expansion.esp|0x00002E",          // Alax_Gourd02 (half)
+			"variants": [
+				"Skyrim Food Expansion.esp|0x00002F"               // Alax_Gourd03 (half)
+			],
+			"workbench_keywords": ["CraftingCookpot", "BYOHCraftingOven"],
+			"requires": "Skyrim Food Expansion.esp"
+		}
+	]
+}

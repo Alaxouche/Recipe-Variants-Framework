@@ -1,7 +1,9 @@
 set_xmakever('3.0.1')
 includes('lib/commonlibsse-ng')
 
-set_project('InventorySwapFramework')
+set_project('RecipeVariantsFramework')
+-- Three components only: xmake parses this as semver, and the plugin rule appends
+-- the fourth itself (SKSE version {major, minor, patch, 0}, FileVersion "x.y.z.0").
 set_version('1.0.0')
 set_license('GPL-3.0')
 
@@ -11,6 +13,11 @@ set_policy('package.requires_lock', true)
 set_toolset('msvc', 'ninja')
 
 add_rules('mode.debug', 'mode.releasedbg', 'mode.release')
+
+-- Group configs are JSON. Required directly rather than through commonlibsse-ng's
+-- optional `rex_json` feature so this target owns the dependency regardless of
+-- how the library is configured. Same version as the author's other frameworks.
+add_requires('nlohmann_json v3.12.0')
 
 option('skyrim_se')
     set_default(false)
@@ -34,7 +41,7 @@ if has_config('skyrim_vr') and (has_config('skyrim_se') or has_config('skyrim_ae
     raise('Cannot combine Skyrim VR with SE/AE builds. Enable only one configuration.')
 end
 
-target('InventorySwapFramework')
+target('RecipeVariantsFramework')
     add_deps('commonlibsse-ng')
 
     local runtime = 'se_ae'
@@ -47,11 +54,13 @@ target('InventorySwapFramework')
     end
 
     add_rules('commonlibsse-ng.plugin', {
-        name        = 'InventorySwapFramework',
+        name        = 'RecipeVariantsFramework',
         author      = 'Alaxouche',
-        description = 'No description provided.',
+        description = 'Lets crafting recipes accept every variant of an item, not just the one they name.',
         runtime     = runtime
     })
+
+    add_packages('nlohmann_json')
 
     add_files('src/**.cpp')
     add_headerfiles('src/**.h')
@@ -90,3 +99,8 @@ target('InventorySwapFramework')
         add_defines('ENABLE_SKYRIM_SE')
         add_defines('ENABLE_SKYRIM_AE')
     end
+
+    -- Ship data/ alongside the DLL: the settings file. Group configs belong to
+    -- the mods that use the framework (Data/SKSE/Plugins/RecipeVariantsFramework/*.json),
+    -- not to the framework itself.
+    add_installfiles('data/(**)')
