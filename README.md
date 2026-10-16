@@ -190,3 +190,7 @@ with `Level = debug`:
 
 Remove the first prototype (`InventorySwap.dll`) when installing this: both would
 act on the same items.
+
+## License
+
+[GPL-3.0](LICENSE)
